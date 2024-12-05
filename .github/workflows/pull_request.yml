@@ -62,7 +62,7 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: "temurin" # See 'Supported distributions' for available options
-          java-version: "9"
+          java-version: "11"
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/scala@master
         continue-on-error: true # To make sure that SARIF upload gets called
