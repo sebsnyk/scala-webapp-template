@@ -64,6 +64,8 @@ jobs:
           distribution: "temurin" # See 'Supported distributions' for available options
           java-version: "11"
       - uses: snyk/actions/setup@master
+      - name: SBT checks
+        run: CI=true sbt compile
       - name: Snyk test
         run: snyk test --sarif-file-output=snyk.sarif
         env:
